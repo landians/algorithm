@@ -1,0 +1,2 @@
+# algorithm
+left god algorithm
