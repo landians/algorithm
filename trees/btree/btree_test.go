@@ -16,6 +16,50 @@ func initTree() *Node {
 	return head
 }
 
+func initAVl() *Node {
+	head := NewNode(1)
+	head.left = NewNode(2)
+	head.right = NewNode(3)
+	head.left.left = NewNode(4)
+	head.left.right = NewNode(5)
+	head.left.left.left = NewNode(6)
+	return head
+}
+
+func initBST() *Node {
+	head := NewNode(6)
+	head.left = NewNode(4)
+	head.right = NewNode(7)
+	head.left.left = NewNode(3)
+	head.left.right = NewNode(5)
+	return head
+}
+
+func initCBT() *Node {
+	head := NewNode(1)
+	head.left = NewNode(2)
+	head.right = NewNode(3)
+	head.left.left = NewNode(4)
+	head.left.right = NewNode(5)
+	head.right.left = NewNode(6)
+	head.right.right = NewNode(7)
+	head.left.left.left = NewNode(8)
+	head.left.left.right = NewNode(9)
+	return head
+}
+
+func initUnCBT() *Node {
+	head := NewNode(1)
+	head.left = NewNode(2)
+	head.right = NewNode(3)
+	head.left.left = NewNode(4)
+	head.left.right = NewNode(5)
+	head.right.left = NewNode(6)
+	head.right.right = NewNode(7)
+	head.right.right.right = NewNode(8)
+	return head
+}
+
 func TestOrderRecur(t *testing.T) {
 	head := initTree()
 	fmt.Println("===== 前序遍历-递归 =====")
@@ -144,4 +188,61 @@ func TestDeserializeByLevel(t *testing.T) {
 	format = SerializeByLevel(head)
 	fmt.Println(format)
 	fmt.Println("===== 层序-反序列化-非递归 =====")
+}
+
+func TestIsBalanced(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 判断平衡二叉树 =====")
+	fmt.Println(IsBalanced(head))
+	fmt.Println("===== 判断平衡二叉树 =====")
+
+	fmt.Println()
+
+	head = initAVl()
+	fmt.Println("===== 判断平衡二叉树 =====")
+	fmt.Println(IsBalanced(head))
+	fmt.Println("===== 判断平衡二叉树 =====")
+}
+
+func TestHeight(t *testing.T) {
+	h := NewNode(100)
+
+	fmt.Println("===== 二叉树的高度 =====")
+	fmt.Println(Height(h))
+	fmt.Println("===== 二叉树的高度 =====")
+
+	fmt.Println()
+
+	head := initTree()
+	fmt.Println("===== 二叉树的高度 =====")
+	fmt.Println(Height(head))
+	fmt.Println("===== 二叉树的高度 =====")
+}
+
+func TestIsBST(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 判断搜索二叉树 =====")
+	fmt.Println(IsBST(head))
+	fmt.Println("===== 判断搜索二叉树 =====")
+
+	fmt.Println()
+
+	head = initBST()
+	fmt.Println("===== 判断搜索二叉树 =====")
+	fmt.Println(IsBST(head))
+	fmt.Println("===== 判断搜索二叉树 =====")
+}
+
+func TestIsCBT(t *testing.T) {
+	head := initUnCBT()
+	fmt.Println("===== 判断完全二叉树 =====")
+	fmt.Println(IsCBT(head))
+	fmt.Println("===== 判断完全二叉树 =====")
+
+	fmt.Println()
+
+	head = initCBT()
+	fmt.Println("===== 判断完全二叉树 =====")
+	fmt.Println(IsCBT(head))
+	fmt.Println("===== 判断完全二叉树 =====")
 }
