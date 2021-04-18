@@ -246,3 +246,53 @@ func TestIsCBT(t *testing.T) {
 	fmt.Println(IsCBT(head))
 	fmt.Println("===== 判断完全二叉树 =====")
 }
+
+func TestCountNodeNum(t *testing.T) {
+	head := initCBT()
+	fmt.Println("===== 统计完全二叉树的节点个数 =====")
+	fmt.Println(CountNodeNum(head))
+	fmt.Println("===== 统计完全二叉树的节点个数 =====")
+}
+
+func TestCountBTreeNode(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 统计二叉树的节点个数 =====")
+	fmt.Println(CountBTreeNode(head))
+	fmt.Println("===== 统计二叉树的节点个数 =====")
+}
+
+func TestFlip(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 翻转二叉树前 =====")
+	PrintBTree(head, 2)
+	fmt.Println("===== 翻转二叉树前 =====")
+
+	fmt.Println()
+
+	fmt.Println("===== 翻转二叉树后 =====")
+	Flip(head)
+	PrintBTree(head, 2)
+	fmt.Println("===== 翻转二叉树后 =====")
+}
+
+func TestFlatten(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 拉平二叉树前 =====")
+	PrintBTree(head, 2)
+	fmt.Println("===== 拉平二叉树前 =====")
+
+	fmt.Println()
+
+	fmt.Println("===== 拉平二叉树后 =====")
+	Flatten(head)
+	PrintBTree(head, 2)
+	fmt.Println("===== 拉平二叉树后 =====")
+}
+
+func TestCreateMaxBTree(t *testing.T) {
+	arr := []int{3, 2, 1, 6, 0, 5}
+	fmt.Println("===== 构造最大二叉树 =====")
+	head := CreateMaxBTree(arr)
+	PrintBTree(head, 2)
+	fmt.Println("===== 构造最大二叉树 =====")
+}

@@ -506,7 +506,7 @@ func processBTree(head *Node) (bool, int) {
 		n int
 	}
 	其中 n 为值等于 value 的节点的数量，相当于吧重复的节点给压缩了。
- */
+*/
 func IsBST(head *Node) bool {
 	if head == nil {
 		return false
@@ -562,7 +562,7 @@ func IsBST(head *Node) bool {
       /  \   或    /  \
      x    x       2   x
 
- */
+*/
 func IsCBT(head *Node) bool {
 	if head == nil {
 		return true
@@ -581,7 +581,7 @@ func IsCBT(head *Node) bool {
 		v := q.Dequeue().(*Node)
 
 		// leaf = true 时, 需要判断每个二叉树节点是否为叶子节点，如果不是，则不是完全二叉树
-		if leaf && !isLeaf(v){
+		if leaf && !isLeaf(v) {
 			return false
 		}
 
@@ -616,4 +616,199 @@ func isLeaf(head *Node) bool {
 	}
 
 	return head.left == nil && head.right == nil
+}
+
+/*
+	获取完全二叉树的节点的个数，要求时间复杂度为O(N), 因此不能使用遍历的方式来计算。
+	大致计算流程分为两个步骤:
+	1. 判断左子树/右子树为满二叉树, 从而利用满二叉树的节点的个数 = 2 ^ h - 1, 其中 h 为树高, 这个公式来计算得到左子树/右子树的节点个数
+	2. 遍历另一半的二叉树来计算得到节点个数。
+
+	详细计算流程如下:
+	1. 遍历到左子树的叶子节点，得到左子树的树高h1;
+	2. 遍历到根节点的右节点的左子树的叶子节点, 同样得到右子树的树高h2;
+	3. 若 h2 < h1, 则说明右子树是一颗满二叉树, 否则 h1 = h2 左子树是一颗满二叉树;
+    4. 根据满二叉树的计算节点的公式得到左子树/右子树的节点的个数 n1;
+	5. 遍历另一半的二叉树, 并计算得到节点的个数 n2;
+    6. 计算总的节点的个数: n =  n1 + n2 + 1
+	eg:
+					1
+				/       \
+               2         3
+            /    \     /   \		h1 = 3, h2 = 2; h2 < h1,  右子树为满二叉树
+           4      5   6     7
+         /   \
+         8   9
+
+					1
+				/       \
+               2          3
+            /    \      /   \		h1 = 3, h2 = 2; h2 > h1,  左子树为满二叉树
+           4      5    6     7
+         /   \   / \  /
+         8   9  10 11 12
+*/
+func CountNodeNum(head *Node) int {
+	if head == nil {
+		return 0
+	}
+	return doCountNodeNum(head, 1, mostLeftLevel(head, 1))
+}
+
+// 返回节点个数, node 为当前节点,  level 为当前节点所在层数, h 为这个完全二叉树层数
+func doCountNodeNum(node *Node, level int, h int) int {
+	if level == h {
+		return 1
+	}
+
+	// h1 = h2， 完全二叉树中的每一个子树都是完全二叉树
+	if mostLeftLevel(node.right, level+1) == h {
+		return (1 << (h - level)) + doCountNodeNum(node.right, level+1, h)
+	} else {
+		return (1 << (h - level - 1)) + doCountNodeNum(node.left, level+1, h)
+	}
+}
+
+// 遍历当前节点的左子树至叶子节点, 计算高度
+func mostLeftLevel(node *Node, level int) int {
+	for node != nil {
+		level++
+		node = node.left
+	}
+	return level - 1
+}
+
+// CountBTreeNode 计算二叉树的节点的个数
+func CountBTreeNode(head *Node) int {
+	if head == nil {
+		return 0
+	}
+	// 总节点的个数 = 根节点 + 左子树节点个数 + 右子树的节点个数
+	return 1 + CountBTreeNode(head.left) + CountBTreeNode(head.right)
+}
+
+/*
+	Flip 翻转二叉树:
+	翻转前:
+			    1
+              /   \
+            2      3
+          /  \   /  \
+         4    5 6    7
+	翻转后:
+			    1
+              /   \
+            3      2
+          /  \   /  \
+         7   6  5    4
+
+*/
+func Flip(head *Node) {
+	if head == nil {
+		return
+	}
+
+	left := head.left
+	right := head.right
+
+	head.left = right
+	head.right = left
+
+	Flip(head.left)
+	Flip(head.right)
+}
+
+/*
+	Flatten 二叉树按照 中 - 左 - 右的方式展开为链表
+		1                 1              1
+      /  \			    /  \              \
+     2    3		=>     2   3     =>        2
+   /  \  / \            \   \               \
+  4   5 6  7             4   6               4
+                          \   \               \
+                          5    7              5
+                                                \
+                                                 3
+                                                  \
+                                                   6
+      											    \
+                                                     7
+*/
+func Flatten(head *Node) {
+	if head == nil {
+		return
+	}
+
+	// 先拉平左右子树
+	Flatten(head.left)
+	Flatten(head.right)
+
+	// 1、左右子树已经被拉平成一条链表
+	left := head.left
+	right := head.right
+
+	// 2、将左子树作为右子树
+	head.left = nil
+	head.right = left
+
+	// 3、将原先的右子树接到当前右子树的末端
+	cur := head
+	for cur.right != nil {
+		cur = cur.right
+	}
+	cur.right = right
+}
+
+/*
+	CreateMaxBTree: 根据数组元素，构建最大的二叉树，即对于二叉树的任意一个节点，其值都大于它左子树的节点的值和右子树的节点的值
+	eg: [3, 2, 1, 6, 0, 5]
+				6
+			  /  \
+			 3    5
+             \   /
+             2  0
+              \
+              1
+*/
+
+func CreateMaxBTree(arr []int) *Node {
+	return build(arr, 0, len(arr)-1)
+}
+
+func max(arr []int, lo, hi int) (int, int) {
+	maxValue := math.MinInt64
+	index := -1
+	for i := lo; i <= hi; i++ {
+		if arr[i] > maxValue {
+			maxValue = arr[i]
+			index = i
+		}
+	}
+	return maxValue, index
+}
+
+func build(arr []int, lo, hi int) *Node {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	if lo > hi {
+		return nil
+	}
+
+	// 先找到数组中的最大值和其对应的索引
+	maxValue, i := max(arr, lo, hi)
+
+	fmt.Printf("[DEBUG] max = %d, index = %d\n", maxValue, i)
+
+	// 根节点
+	head := NewNode(maxValue)
+
+	// 构造最大左子树
+	head.left = build(arr, lo, i-1)
+
+	// 构造最大右子树
+	head.right = build(arr, i+1, hi)
+
+	return head
 }
