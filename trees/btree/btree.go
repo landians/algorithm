@@ -515,7 +515,7 @@ func IsBST(head *Node) bool {
 	s := stack.New(defaultSize)
 
 	// 表示中序遍历过程中的上一个节点的值
-	compare := -9999
+	compare := math.MinInt64
 
 	for !s.IsEmpty() || head != nil {
 		if head != nil {
@@ -541,6 +541,112 @@ func IsBST(head *Node) bool {
 	}
 	return true
 }
+
+// IsValidBST 使用递归的方式来判断是否为 BST
+func IsValidBST(head *Node) bool {
+	return isValidBST(head, nil, nil)
+}
+
+// 任意一个节点，都必须满足，max.Value > head.Value > min.Value
+func isValidBST(head *Node, min *Node, max *Node) bool {
+	if head == nil {
+		return true
+	}
+
+	if min != nil && head.value < min.value {
+		return false
+	}
+
+	if max != nil && head.value > max.value {
+		return false
+	}
+
+	return isValidBST(head.left, min, head) && isValidBST(head.right, head, max)
+}
+
+// IsInBST 在 BST 内搜索指定节点
+func IsInBST(head *Node, target int) bool {
+	if head == nil {
+		return false
+	}
+
+	if head.value == target {
+		return true
+	}
+
+	if head.value > target {
+		return IsInBST(head.left, target)
+	} else {
+		return IsInBST(head.right, target)
+	}
+}
+
+/*
+	抽象 BST 的遍历框架
+	func BST(head *Node, target interface) interface{} {
+		if head == nil {
+			return nil
+		}
+
+		if head.value == target {
+			... do something
+		}
+
+		if head.value > target {
+			return BST(head.left, target)
+		} else {
+			return BST(head.right, target)
+		}
+	}
+ */
+
+
+// InsertIntoBST 插入节点到 BST 中
+func InsertIntoBST(head *Node, v int) *Node {
+	// 找到空位置插入新的节点
+	if head == nil {
+		return NewNode(v)
+	}
+
+	// if (head.value == v)
+	// BST 中一般不会插入已存在元素
+
+	// 左子树查找
+	if head.value < v {
+		head.right = InsertIntoBST(head.right, v)
+	}
+
+	// 右子树查找
+	if head.value > v {
+		head.left = InsertIntoBST(head.left, v)
+	}
+
+	return head
+}
+
+// DeleteFromBST 从 BST 中删除指定节点
+func DeleteFromBST(head *Node, target int) *Node {
+	if head == nil {
+		return nil
+	}
+
+	if head.value == target {
+		// 执行删除操作
+	}
+
+	// 左子树查找
+	if head.value > target {
+		head.left = DeleteFromBST(head.left, target)
+	}
+
+	// 右子树查找
+	if head.value < target {
+		head.right  = DeleteFromBST(head.right, target)
+	}
+
+	return head
+}
+
 
 /*
 	完全二叉树举例:

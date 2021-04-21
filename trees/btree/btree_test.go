@@ -233,6 +233,53 @@ func TestIsBST(t *testing.T) {
 	fmt.Println("===== 判断搜索二叉树 =====")
 }
 
+func TestIsValidBST(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 判断搜索二叉树 =====")
+	fmt.Println(IsValidBST(head))
+	fmt.Println("===== 判断搜索二叉树 =====")
+
+	fmt.Println()
+
+	head = initBST()
+	fmt.Println("===== 判断搜索二叉树 =====")
+	fmt.Println(IsValidBST(head))
+	fmt.Println("===== 判断搜索二叉树 =====")
+}
+
+func TestIsInBST(t *testing.T) {
+	head := initBST()
+
+	fmt.Println("===== 判断是否是搜索二叉树的节点 =====")
+	fmt.Println(IsInBST(head, 7))
+	fmt.Println("===== 判断是否是搜索二叉树的节点 =====")
+
+	fmt.Println()
+
+	fmt.Println("===== 判断是否是搜索二叉树的节点 =====")
+	fmt.Println(IsInBST(head, 20))
+	fmt.Println("===== 判断是否是搜索二叉树的节点 =====")
+}
+
+func TestInsertIntoBST(t *testing.T) {
+	head := initBST()
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+	PrintBTree(head, 2)
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+
+	fmt.Println()
+
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+	InsertIntoBST(head, 10)
+	PrintBTree(head, 2)
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+	InsertIntoBST(head, 9)
+	PrintBTree(head, 2)
+	fmt.Println("===== 搜索二叉树插入节点 =====")
+}
+
 func TestIsCBT(t *testing.T) {
 	head := initUnCBT()
 	fmt.Println("===== 判断完全二叉树 =====")
