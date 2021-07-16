@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f023505-a2da-4343-8350-1a7df2943f57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lfu/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lfu/lfu.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lfu/lfu_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lru/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lru/lru.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lru/lru_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/btree/btree.go" beforeDir="false" afterPath="$PROJECT_DIR$/trees/btree/btree.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/btree/btree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/trees/btree/btree_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,81 +50,81 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trees/btree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestInsertIntoBST in github.com/landians/algorithm/trees/btree">
-    <configuration name="TestCreateMaxBTree in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestLFUCache_Eliminate in github.com/landians/algorithm/lfu">
+    <configuration name="TestLFUCache_Eliminate in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/trees/btree" />
+      <working_directory value="$PROJECT_DIR$/lfu" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/trees/btree" />
+      <package value="github.com/landians/algorithm/lfu" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCreateMaxBTree\E$" />
+      <pattern value="^\QTestLFUCache_Eliminate\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestFlatten in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLFUCache_Get in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/trees/btree" />
+      <working_directory value="$PROJECT_DIR$/lfu" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/trees/btree" />
+      <package value="github.com/landians/algorithm/lfu" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestFlatten\E$" />
+      <pattern value="^\QTestLFUCache_Get\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestInsertIntoBST in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLRUCache_Eliminate in github.com/landians/algorithm/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/trees/btree" />
+      <working_directory value="$PROJECT_DIR$/lru" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/trees/btree" />
+      <package value="github.com/landians/algorithm/lru" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestInsertIntoBST\E$" />
+      <pattern value="^\QTestLRUCache_Eliminate\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestIsInBST in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLRUCache_Remove in github.com/landians/algorithm/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/trees/btree" />
+      <working_directory value="$PROJECT_DIR$/lru" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/trees/btree" />
+      <package value="github.com/landians/algorithm/lru" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestIsInBST\E$" />
+      <pattern value="^\QTestLRUCache_Remove\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestIsValidBST in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Heap in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/trees/btree" />
+      <working_directory value="$PROJECT_DIR$/lfu" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/trees/btree" />
+      <package value="github.com/landians/algorithm/lfu" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestIsValidBST\E$" />
+      <pattern value="^\QTest_Heap\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestInsertIntoBST in github.com/landians/algorithm/trees/btree" />
-        <item itemvalue="Go Test.TestIsInBST in github.com/landians/algorithm/trees/btree" />
-        <item itemvalue="Go Test.TestIsValidBST in github.com/landians/algorithm/trees/btree" />
-        <item itemvalue="Go Test.TestCreateMaxBTree in github.com/landians/algorithm/trees/btree" />
-        <item itemvalue="Go Test.TestFlatten in github.com/landians/algorithm/trees/btree" />
+        <item itemvalue="Go Test.TestLFUCache_Eliminate in github.com/landians/algorithm/lfu" />
+        <item itemvalue="Go Test.Test_Heap in github.com/landians/algorithm/lfu" />
+        <item itemvalue="Go Test.TestLFUCache_Get in github.com/landians/algorithm/lfu" />
+        <item itemvalue="Go Test.TestLRUCache_Remove in github.com/landians/algorithm/lru" />
+        <item itemvalue="Go Test.TestLRUCache_Eliminate in github.com/landians/algorithm/lru" />
       </list>
     </recent_temporary>
   </component>
