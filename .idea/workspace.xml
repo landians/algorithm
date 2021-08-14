@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1f023505-a2da-4343-8350-1a7df2943f57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lfu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lfu/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/vote/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -32,26 +37,37 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trees/btree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLFUCache_Eliminate in github.com/landians/algorithm/lfu">
+  <component name="RunManager" selected="Go Test.TestSerializeByIn in github.com/landians/algorithm/trees/btree">
+    <configuration name="go build github.com/landians/algorithm/leetcode/vote" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="algorithm" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/landians/algorithm/leetcode/vote" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/leetcode/vote/main.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestLFUCache_Eliminate in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
       <working_directory value="$PROJECT_DIR$/lfu" />
@@ -64,40 +80,28 @@
       <pattern value="^\QTestLFUCache_Eliminate\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLFUCache_Get in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSerializeByIn in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/lfu" />
+      <working_directory value="$PROJECT_DIR$/trees/btree" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/lfu" />
+      <package value="github.com/landians/algorithm/trees/btree" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestLFUCache_Get\E$" />
+      <pattern value="^\QTestSerializeByIn\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLRUCache_Eliminate in github.com/landians/algorithm/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSerializeByPre in github.com/landians/algorithm/trees/btree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/lru" />
+      <working_directory value="$PROJECT_DIR$/trees/btree" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/lru" />
+      <package value="github.com/landians/algorithm/trees/btree" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestLRUCache_Eliminate\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestLRUCache_Remove in github.com/landians/algorithm/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/lru" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/lru" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLRUCache_Remove\E$" />
+      <pattern value="^\QTestSerializeByPre\E$" />
       <method v="2" />
     </configuration>
     <configuration name="Test_Heap in github.com/landians/algorithm/lfu" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -114,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestSerializeByIn in github.com/landians/algorithm/trees/btree" />
+        <item itemvalue="Go Test.TestSerializeByPre in github.com/landians/algorithm/trees/btree" />
+        <item itemvalue="Go Build.go build github.com/landians/algorithm/leetcode/vote" />
         <item itemvalue="Go Test.TestLFUCache_Eliminate in github.com/landians/algorithm/lfu" />
         <item itemvalue="Go Test.Test_Heap in github.com/landians/algorithm/lfu" />
-        <item itemvalue="Go Test.TestLFUCache_Get in github.com/landians/algorithm/lfu" />
-        <item itemvalue="Go Test.TestLRUCache_Remove in github.com/landians/algorithm/lru" />
-        <item itemvalue="Go Test.TestLRUCache_Eliminate in github.com/landians/algorithm/lru" />
       </list>
     </recent_temporary>
   </component>
