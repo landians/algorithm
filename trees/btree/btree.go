@@ -21,7 +21,7 @@ import (
 后序遍历, 指的是按照 左 - 右 - 中(当前节点) 的方式进行遍历: 4 5 2 6 7 3 1
 */
 
-// Node 二叉树实现
+// Node 二叉树节点的实现
 type Node struct {
 	value int
 	left  *Node
@@ -151,7 +151,7 @@ func PosOrderUnRecur(head *Node) {
 
 	// 如下步骤和非递归版的前序遍历类似
 	for !s1.IsEmpty() {
-		// 出栈
+		// 出栈, 顺序为：中 - 右 - 左
 		v := s1.Pop().(*Node)
 
 		// 打印语句替换为入栈
@@ -318,11 +318,11 @@ func DeserializeByPre(format string) *Node {
 	for _, v := range values {
 		q.Enqueue(v)
 	}
-	return recoverByQueue(q)
+	return recoverByPreQueue(q)
 }
 
 // 通过队列来还原树
-func recoverByQueue(q *queue.Queue) *Node {
+func recoverByPreQueue(q *queue.Queue) *Node {
 	if q == nil || q.IsEmpty() {
 		return nil
 	}
@@ -335,8 +335,8 @@ func recoverByQueue(q *queue.Queue) *Node {
 
 	n, _ := strconv.Atoi(v)
 	head := NewNode(n)
-	head.left = recoverByQueue(q)
-	head.right = recoverByQueue(q)
+	head.left = recoverByPreQueue(q)
+	head.right = recoverByPreQueue(q)
 	return head
 }
 
@@ -388,6 +388,60 @@ func createNode(v string) *Node {
 	}
 	n, _ := strconv.Atoi(v)
 	return NewNode(n)
+}
+
+// MaxWidth 返回二叉树的最大宽度
+func MaxWidth(head *Node) int {
+	if head == nil {
+		return 0
+	}
+
+	q := queue.New(defaultSize)
+	levelMap := make(map[*Node]int) // 用于记录每个节点所在的层数
+	levelMap[head] = 1              // 根节点是在第一层
+
+	curLevel := 1        // 记录当前的层数
+	curLevelNodes := 0   // 记录当前层的节点个数
+	max := math.MinInt64 // 记录所有层中，哪一层的节点个数是最多的，其实也就是二叉树的最大宽度
+
+	// 根节点先入队
+	q.Enqueue(head)
+
+	for !q.IsEmpty() {
+		// 出队
+		v := q.Dequeue().(*Node)
+
+		// 得到节点所在的层数
+		curNodeLevel := levelMap[v]
+		if curNodeLevel == curLevel { // 弹出的节点所在的层正好是统计层
+			curLevelNodes++
+		} else { // 说明 curLevel 层已经统计完了，curLevelNodes 的值就是 curLevel 的宽度
+			// 进入下一层继续统计
+			curLevel++
+			// 进入新的一层的时候，curLevelNodes 自然为1
+			// 因为出队的节点必然是新的一层的第一个节点
+			curLevelNodes = 1
+		}
+
+		// 左子节点入队
+		if v.left != nil {
+			levelMap[v.left] = curNodeLevel + 1
+			q.Enqueue(v.left)
+		}
+
+		// 右子节点入队
+		if v.right != nil {
+			levelMap[v.right] = curNodeLevel + 1
+			q.Enqueue(v.right)
+		}
+
+		// 更新二叉树的最大宽度值
+		if max < curLevelNodes {
+			max = curLevelNodes
+		}
+	}
+
+	return max
 }
 
 // Search 查询二叉树中的节点
@@ -598,8 +652,7 @@ func IsInBST(head *Node, target int) bool {
 			return BST(head.right, target)
 		}
 	}
- */
-
+*/
 
 // InsertIntoBST 插入节点到 BST 中
 func InsertIntoBST(head *Node, v int) *Node {
@@ -641,12 +694,11 @@ func DeleteFromBST(head *Node, target int) *Node {
 
 	// 右子树查找
 	if head.value < target {
-		head.right  = DeleteFromBST(head.right, target)
+		head.right = DeleteFromBST(head.right, target)
 	}
 
 	return head
 }
-
 
 /*
 	完全二叉树举例:
@@ -814,12 +866,16 @@ func Flip(head *Node) {
 		return
 	}
 
+	// 获取左子树
 	left := head.left
+	// 获取右子树
 	right := head.right
 
+	// 交换指向
 	head.left = right
 	head.right = left
 
+	// 对于每一个二叉树的节点都这么做
 	Flip(head.left)
 	Flip(head.right)
 }
@@ -849,15 +905,15 @@ func Flatten(head *Node) {
 	Flatten(head.left)
 	Flatten(head.right)
 
-	// 1、左右子树已经被拉平成一条链表
+	// 左右子树已经被拉平成一条链表
 	left := head.left
 	right := head.right
 
-	// 2、将左子树作为右子树
+	// 将左子树作为右子树
 	head.left = nil
 	head.right = left
 
-	// 3、将原先的右子树接到当前右子树的末端
+	// 将原先的右子树接到当前右子树的末端
 	cur := head
 	for cur.right != nil {
 		cur = cur.right
@@ -917,4 +973,195 @@ func build(arr []int, lo, hi int) *Node {
 	head.right = build(arr, i+1, hi)
 
 	return head
+}
+
+// LowestCommonAncestor 返回两个节点的最低公共祖先节点,  node1 和 node2 肯定要是以 head 为根节点的二叉树上的节点
+func LowestCommonAncestor(head *Node, node1 *Node, node2 *Node) *Node {
+	if head == nil || node1 == nil || node2 == nil {
+		return nil
+	}
+
+	// 用于记录每一个节点的父节点
+	fatherMap := make(map[*Node]*Node)
+	// 先搞定根节点
+	fatherMap[head] = head
+	// 再搞定左右子树
+	processLca(head, fatherMap)
+
+	// 用于记录 node1 网上寻找父节点的路径
+	node1Map := make(map[*Node]struct{})
+	cur := node1
+
+	// node1 开始向上寻找自己的父节点，并记录寻找路径
+	for cur != fatherMap[cur] {
+		node1Map[cur] = struct{}{}
+		cur = fatherMap[cur]
+	}
+	node1Map[head] = struct{}{}
+
+	// node2 开始向上寻找自己的父节点
+	cur = node2
+	for cur != fatherMap[cur] {
+		// 当发现 node2 的其中一个父节点也是 node1 的父节点时，就说明找到了 node1 和 node2 的最低公共祖先节点了
+		if _, ok := node1Map[cur]; ok {
+			return cur
+		}
+		cur = fatherMap[cur]
+	}
+	return cur
+}
+
+func processLca(head *Node, fatherMap map[*Node]*Node) {
+	if head == nil {
+		return
+	}
+
+	if head.left != nil {
+		fatherMap[head.left] = head
+		processLca(head.left, fatherMap)
+	}
+
+	if head.right != nil {
+		fatherMap[head.right] = head
+		processLca(head.right, fatherMap)
+	}
+}
+
+func LowestCommonAncestorRecur(head *Node, node1 *Node, node2 *Node) *Node {
+	if head == nil || head == node1 || head == node2 {
+		return head
+	}
+
+	// 获取左子树上两个节点的最低公共祖先节点
+	left := LowestCommonAncestorRecur(head.left, node1, node2)
+	// 获取右子树上两个节点的最低公共祖先节点
+	right := LowestCommonAncestorRecur(head.right, node1, node2)
+
+	// 说明 node1 和 node2 不是对方的 lca
+	if left != nil && right != nil {
+		return head
+	}
+
+	// 说明 node1 或者 node2 是对方的 lca
+	if left != nil {
+		return left
+	}
+	return right
+}
+
+// Morris Morris 遍历一个二叉树
+func Morris(head *Node) {
+	if head == nil {
+		return
+	}
+
+	var (
+		cur       *Node = head
+		mostRight *Node
+	)
+
+	for cur != nil {
+		// 这里根据打印结果可知, 如果当前节点是存在左子树的, 则会被打印两遍
+		fmt.Print(fmt.Sprintf("%d ", cur.value))
+		// 判断当前节点是否存在左子树
+		mostRight = cur.left
+		if mostRight != nil {
+			// 若当前节点存在左子树, 则去查找左子树的真实的右节点, 这里的真实指的是 mostRight != cur
+			for mostRight.right != nil && mostRight.right != cur {
+				mostRight = mostRight.right
+			}
+
+			if mostRight.right == nil { // 若查找到的真实的右节点的右子树为空, 则其右子树指向当前节点, 同时当前节点指向其左左子树节点
+				mostRight.right = cur
+				cur = cur.left
+				continue // continue 很重要
+			} else { // 若查找到的真实的右节点的右子树不为空, 这里一般是 mostRight.right == cur 了, 为了不陷入死循环, 这里 mostRight.right = nil
+				mostRight.right = nil
+			}
+		}
+		// 当前节点不存在左子树时, 当前节点指向其右子树, 这一步也是 mostRight.right = nil 后会执行的关键一步, 防止陷入了死循环
+		cur = cur.right
+	}
+}
+
+/*
+MorrisPreOrder
+Morris 实现先序遍历一个二叉树
+打印原则说明: 存在左子树的节点, 第一次遍历到时打印, 第二次遍历到时不打印, 不存在左子树的节点直接打印
+*/
+func MorrisPreOrder(head *Node) {
+	if head == nil {
+		return
+	}
+
+	var (
+		cur       *Node = head
+		mostRight *Node
+	)
+
+	for cur != nil {
+		// 判断当前节点是否存在左子树
+		mostRight = cur.left
+		if mostRight != nil {
+			// 若当前节点存在左子树, 则去查找左子树的真实的右节点, 这里的真实指的是 mostRight != cur
+			for mostRight.right != nil && mostRight.right != cur {
+				mostRight = mostRight.right
+			}
+
+			if mostRight.right == nil { // 若查找到的真实的右节点的右子树为空, 则其右子树指向当前节点, 同时当前节点指向其左左子树节点
+				mostRight.right = cur
+				// 存在左子树的节点, 第一次遍历到时打印
+				fmt.Print(fmt.Sprintf("%d ", cur.value))
+				cur = cur.left
+				continue // continue 很重要
+			} else { // 若查找到的真实的右节点的右子树不为空, 这里一般是 mostRight.right == cur 了, 为了不陷入死循环, 这里 mostRight.right = nil
+				mostRight.right = nil
+			}
+		} else {
+			// 不存在左子树的节点直接打印
+			fmt.Print(fmt.Sprintf("%d ", cur.value))
+		}
+
+		// 当前节点不存在左子树时, 当前节点指向其右子树, 这一步也是 mostRight.right = nil 后会执行的关键一步, 防止陷入了死循环
+		cur = cur.right
+	}
+}
+
+/*
+MorrisInOrder
+Morris 实现中序遍历一个二叉树
+打印原则说明: 存在左子树的节点, 第一次遍历到时不打印, 第二次遍历到时打印, 不存在左子树的节点直接打印
+*/
+func MorrisInOrder(head *Node) {
+	if head == nil {
+		return
+	}
+
+	var (
+		cur       *Node = head
+		mostRight *Node
+	)
+
+	for cur != nil {
+		// 判断当前节点是否存在左子树
+		mostRight = cur.left
+		if mostRight != nil {
+			// 若当前节点存在左子树, 则去查找左子树的真实的右节点, 这里的真实指的是 mostRight != cur
+			for mostRight.right != nil && mostRight.right != cur {
+				mostRight = mostRight.right
+			}
+
+			if mostRight.right == nil { // 若查找到的真实的右节点的右子树为空, 则其右子树指向当前节点, 同时当前节点指向其左左子树节点
+				mostRight.right = cur
+				cur = cur.left
+				continue // continue 很重要
+			} else { // 若查找到的真实的右节点的右子树不为空, 这里一般是 mostRight.right == cur 了, 为了不陷入死循环, 这里 mostRight.right = nil
+				mostRight.right = nil
+			}
+		}
+
+		fmt.Print(fmt.Sprintf("%d ", cur.value))
+		// 当前节点不存在左子树时, 当前节点指向其右子树, 这一步也是 mostRight.right = nil 后会执行的关键一步, 防止陷入了死循环
+		cur = cur.right
+	}
 }

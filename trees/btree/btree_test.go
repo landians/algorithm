@@ -2,6 +2,7 @@ package btree
 
 import (
 	"fmt"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -190,6 +191,15 @@ func TestDeserializeByLevel(t *testing.T) {
 	fmt.Println("===== 层序-反序列化-非递归 =====")
 }
 
+func TestMaxWidth(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== 获取二叉树的最大宽度 =====")
+	PrintBTree(head, 4)
+	fmt.Println("===== 获取二叉树的最大宽度 =====")
+
+	assert.Equal(t, MaxWidth(head), 4)
+}
+
 func TestIsBalanced(t *testing.T) {
 	head := initTree()
 	fmt.Println("===== 判断平衡二叉树 =====")
@@ -342,4 +352,56 @@ func TestCreateMaxBTree(t *testing.T) {
 	head := CreateMaxBTree(arr)
 	PrintBTree(head, 2)
 	fmt.Println("===== 构造最大二叉树 =====")
+}
+
+func TestLowestCommonAncestor(t *testing.T) {
+	head := initTree()
+	node1 := Search(head, 4)
+	node2 := Search(head, 5)
+	node3 := Search(head, 6)
+	fmt.Println("===== 最低公共祖先节点 =====")
+	ca := LowestCommonAncestor(head, node1, node2)
+	fmt.Println(ca)
+
+	ca = LowestCommonAncestor(head, node1, node3)
+	fmt.Println(ca)
+	fmt.Println("===== 最低公共祖先节点 =====")
+}
+
+func TestLowestCommonAncestorRecur(t *testing.T) {
+	head := initTree()
+	node1 := Search(head, 4)
+	node2 := Search(head, 5)
+	node3 := Search(head, 6)
+	fmt.Println("===== 最低公共祖先节点 =====")
+	ca := LowestCommonAncestorRecur(head, node1, node2)
+	fmt.Println(ca)
+
+	ca = LowestCommonAncestorRecur(head, node1, node3)
+	fmt.Println(ca)
+	fmt.Println("===== 最低公共祖先节点 =====")
+}
+
+func TestMorris(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== Morris遍历二叉树 =====")
+	Morris(head)
+	fmt.Println()
+	fmt.Println("===== Morris遍历二叉树 =====")
+}
+
+func TestMorrisPreOrder(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== Morris先序遍历二叉树 =====")
+	MorrisPreOrder(head)
+	fmt.Println()
+	fmt.Println("===== Morris先序遍历二叉树 =====")
+}
+
+func TestMorrisInOrder(t *testing.T) {
+	head := initTree()
+	fmt.Println("===== Morris中序遍历二叉树 =====")
+	MorrisInOrder(head)
+	fmt.Println()
+	fmt.Println("===== Morris中序遍历二叉树 =====")
 }
