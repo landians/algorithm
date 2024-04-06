@@ -1,38 +1,25 @@
 package heap
 
 import (
-	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
-func Test_HeapSort(t *testing.T) {
-	arr := generateRandomArray(10000, 100000)
-	arr1, arr2 := arr, arr
+func TestNewMaxHeap(t *testing.T) {
+	data := []int{2, 1, 3, 6, 0, 4}
+	maxHeap := NewHeapFrom(data, true)
+	assert.Equal(t, []int{6, 3, 4, 1, 0, 2}, maxHeap.Data())
 
-	heapSort(arr1)
-	comparator(arr2)
-
-	assert.Equal(t, ordered(arr1), true, "arr1 应该有序")
-	assert.Equal(t, arr1, arr2, "arr1 应该等于 arr2")
+	minHeap := NewHeapFrom(data, false)
+	assert.Equal(t, []int{0, 1, 3, 6, 2, 4}, minHeap.Data())
 }
 
-func Test_HeapInsert(t *testing.T) {
-	fmt.Println("===== 测试 heapInsert =====")
-	arr := []int{1, 2, 3, 4, 5, 6}
-	for i := 0; i < len(arr); i++ {
-		heapInsert(arr, i)
-	}
-	fmt.Println(arr)
-	fmt.Println("===== 测试 heapInsert =====")
-}
+func TestHeapSort(t *testing.T) {
+	d1 := []int{2, 1, 3, 6, 0, 4}
+	HeapSort(d1, false)
+	assert.Equal(t, []int{0, 1, 2, 3, 4, 6}, d1)
 
-func Test_HeapIfy(t *testing.T) {
-	fmt.Println("===== 测试 heapIfy =====")
-	arr := []int{1, 2, 3, 4, 5, 6}
-	for i := len(arr)-1; i >=0; i-- {
-		heapIfy(arr, i, len(arr))
-	}
-	fmt.Println(arr)
-	fmt.Println("===== 测试 heapIfy =====")
+	d2 := []int{2, 1, 3, 6, 0, 4}
+	HeapSort(d2, true)
+	assert.Equal(t, []int{6, 4, 3, 2, 1, 0}, d2)
 }

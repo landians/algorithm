@@ -1,8 +1,6 @@
 package graph
 
 import (
-	"container/heap"
-	"container/list"
 	"fmt"
 	"github.com/landians/algorithm/queue"
 	"github.com/landians/algorithm/stack"
@@ -224,48 +222,5 @@ func (s *MySets) Union(from *Node, to *Node) {
 		fromSet = append(fromSet, toNode)
 		// 将 toNode 所在的集合更改 fromSet
 		s.SetMap[toNode] = fromSet
-	}
-}
-
-
-func PrimMST(g *Graph) {
-	// TODO: 创建优先级队列，本质是一个小顶堆
-	priorityQueue := heap.New()
-
-	// 新建用于保存所有 Node 的 map
-	nodeMap := make(map[*Node]struct{})
-
-	// 新建用于保存最终确定的最小生成树的边的 map
-	mstMap := make(map[*Edge]struct{})
-
-	// for 循环是为了考虑到 森林 的情况，即多个图一起构建的一个数据结构
-	for _, node := range g.Nodes { // 随机选择一个 node
-
-		// 节点不存在，则新添加节点
-		if _, ok := nodeMap[node]; !ok {
-			nodeMap[node] = struct{}{}
-			// 并将这个节点所关联的边加入到优先级队列中
-			for _, edge := range node.Edges {
-				// TODO: 将边加入到优先级队列中
-			}
-
-			// 但优先级队列不为空时
-			for !heap.IsEmpay() {
-				// TODO: 出队一个边的权重值最小的
-				edge := heap.Pop().(*Edge)
-				// 选择一个节点
-				toNode := edge.To
-				// 若这个节点不在 nodeMap 中，则新增
-				if _, ok = nodeMap[toNode]; !ok {
-					nodeMap[toNode] = struct{}{}
-					// 同时将这条边记录到 mstMap 中
-					mstMap[edge] = struct{}{}
-					// 继续加入其他的边
-					for _, nextEdge := toNode.Edges {
-						// TODO: 将边加入到优先级队列中
-					}
-				}
-			}
-		}
 	}
 }

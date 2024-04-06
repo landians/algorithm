@@ -12,27 +12,27 @@ const (
 	defaultSize = 10
 )
 
-// node 单链表的节点
-type node struct {
+// Node 单链表的节点
+type Node struct {
 	value int
-	next  *node
+	next  *Node
 }
 
-func newNode(v int) *node {
-	return &node{value: v}
+func newNode(v int) *Node {
+	return &Node{value: v}
 }
 
-// chain 单链表
-type chain struct {
-	head *node
+// Chain 单链表
+type Chain struct {
+	head *Node
 	len  int
 }
 
-func newChain() *chain {
-	return &chain{head: newNode(0)}
+func newChain() *Chain {
+	return &Chain{head: newNode(0)}
 }
 
-func (ch *chain) insert(v int) *node {
+func (ch *Chain) insert(v int) *Node {
 	vNode := newNode(v)
 	cur := ch.head
 
@@ -47,7 +47,7 @@ func (ch *chain) insert(v int) *node {
 	return vNode
 }
 
-func (ch *chain) delete(no *node) *node {
+func (ch *Chain) delete(no *Node) *Node {
 	if no == nil {
 		return nil
 	}
@@ -77,7 +77,7 @@ func (ch *chain) delete(no *node) *node {
 	return cur
 }
 
-func (ch *chain) query(v int) *node {
+func (ch *Chain) query(v int) *Node {
 	cur := ch.head
 
 	for cur != nil {
@@ -91,7 +91,7 @@ func (ch *chain) query(v int) *node {
 	return cur
 }
 
-func (ch *chain) update(no *node, v int) *node {
+func (ch *Chain) update(no *Node, v int) *Node {
 	if no == nil {
 		return nil
 	}
@@ -112,7 +112,7 @@ func (ch *chain) update(no *node, v int) *node {
 	return cur
 }
 
-func (ch *chain) traverse() {
+func (ch *Chain) traverse() {
 	if ch.head == nil || ch.head.next == nil {
 		return
 	}
@@ -130,7 +130,7 @@ func (ch *chain) traverse() {
 }
 
 // IsPalindrome1 用于判断单链表是否是回环结构， 使用栈
-func IsPalindrome1(head *node) bool {
+func IsPalindrome1(head *Node) bool {
 	if head == nil {
 		return true
 	}
@@ -148,7 +148,7 @@ func IsPalindrome1(head *node) bool {
 	// 重新遍历链表，并从栈中依次弹出节点进行比对，若有一个节点不相同，则返回 false
 	cur = head
 	for cur != nil {
-		vNode := s.Pop().(*node)
+		vNode := s.Pop().(*Node)
 		if vNode.value != cur.value {
 			break
 		}
@@ -159,7 +159,7 @@ func IsPalindrome1(head *node) bool {
 }
 
 // IsPalindrome2 用于判断单链表是否是回环结构， 使用栈
-func IsPalindrome2(head *node) bool {
+func IsPalindrome2(head *Node) bool {
 	if head == nil || head.next == nil {
 		return true
 	}
@@ -188,7 +188,7 @@ func IsPalindrome2(head *node) bool {
 	// 从栈中依次弹出节点，并与链表的前一半节点进行比较, 若有一个节点不相同，则返回 false
 	cur := head
 	for !s.IsEmpty() {
-		vNode := s.Pop().(*node)
+		vNode := s.Pop().(*Node)
 		if cur.value != vNode.value {
 			return false
 		}
@@ -198,7 +198,7 @@ func IsPalindrome2(head *node) bool {
 }
 
 // IsPalindrome3 用于判断单链表是否是回环结构， 不使用栈
-func IsPalindrome3(head *node) bool {
+func IsPalindrome3(head *Node) bool {
 	if head == nil || head.next == nil {
 		return true
 	}
@@ -219,7 +219,7 @@ func IsPalindrome3(head *node) bool {
 	fast = slow.next // 记录链表中间节点的下一个节点
 	slow.next = nil  // 链表中间节点指向nil
 
-	var p *node
+	var p *Node
 
 	for fast != nil {
 		p = fast.next    // 记录快指针的后驱节点
@@ -259,7 +259,7 @@ func IsPalindrome3(head *node) bool {
 }
 
 // ChainPartition 将单链表按照节点值 < value | = value | > value 进行区域划分
-func ChainPartition(head *node, value int) *node {
+func ChainPartition(head *Node, value int) *Node {
 	if head == nil {
 		return nil
 	}
@@ -267,12 +267,12 @@ func ChainPartition(head *node, value int) *node {
 	// = value 的区间: [eh et]
 	// > value 的区间: [mh mt]
 	var (
-		lh *node // less than head
-		lt *node // less than tail
-		eh *node // equal than head
-		et *node // equal than tail
-		mh *node // more than head
-		mt *node // more than tail
+		lh *Node // less than head
+		lt *Node // less than tail
+		eh *Node // equal than head
+		et *Node // equal than tail
+		mh *Node // more than head
+		mt *Node // more than tail
 	)
 
 	for head != nil {
@@ -428,7 +428,7 @@ func PrintRandChain(head *randNode) {
 }
 
 // GetIntersectNode 判断两个单链表是否相交
-func GetIntersectNode(head1 *node, head2 *node) *node {
+func GetIntersectNode(head1 *Node, head2 *Node) *Node {
 	if head1 == nil || head2 == nil {
 		return nil
 	}
@@ -451,14 +451,14 @@ func GetIntersectNode(head1 *node, head2 *node) *node {
 }
 
 // 两个单链表都有环的时候，获取相交的节点
-func bothLoop(head1 *node, head2 *node, loop1 *node, loop2 *node) *node {
+func bothLoop(head1 *Node, head2 *Node, loop1 *Node, loop2 *Node) *Node {
 	if head1 == nil || head2 == nil {
 		return nil
 	}
 
 	var (
-		cur1 *node
-		cur2 *node
+		cur1 *Node
+		cur2 *Node
 	)
 
 	// 两个单链表的入环节点相同时，以入环节点为终点，重新进行两个无环节点判断相交的过程
@@ -521,7 +521,7 @@ func bothLoop(head1 *node, head2 *node, loop1 *node, loop2 *node) *node {
 }
 
 // 两个单链表都无环的时候，获取相交的节点
-func noLoop(head1 *node, head2 *node) *node {
+func noLoop(head1 *Node, head2 *Node) *Node {
 	if head1 == nil || head2 == nil {
 		return nil
 	}
@@ -572,7 +572,7 @@ func noLoop(head1 *node, head2 *node) *node {
 }
 
 // GetLoopNode 判断单链表是有环, 返回第一个入环的节点, 不使用哈希表
-func GetLoopNode(head *node) *node {
+func GetLoopNode(head *Node) *Node {
 	if head == nil || head.next == nil || head.next.next == nil {
 		return nil
 	}
@@ -610,12 +610,12 @@ func GetLoopNode(head *node) *node {
 }
 
 // GetLoopNode2 判断单链表是有环, 返回第一个入环的节点, 使用哈希表
-func GetLoopNode2(head *node) *node {
+func GetLoopNode2(head *Node) *Node {
 	if head == nil {
 		return nil
 	}
 
-	nodeMap := make(map[*node]struct{})
+	nodeMap := make(map[*Node]struct{})
 
 	// 遍历链表，并使用哈希表来记录每一个节点，如果链表有环，那肯定遍历的过程中就能够从哈希表中查找到入环节点的值
 	cur := head
@@ -636,7 +636,7 @@ func init() {
 }
 
 // AddTwoNumbers 两个链表相加， 复用 l1 或者 l2
-func AddTwoNumbers(l1 *node, l2 *node) *node {
+func AddTwoNumbers(l1 *Node, l2 *Node) *Node {
 	if l1 == nil {
 		return l2
 	}
@@ -695,7 +695,7 @@ func AddTwoNumbers(l1 *node, l2 *node) *node {
 }
 
 // AddTwoNumbers2 两个链表相加， 返回新的链表
-func AddTwoNumbers2(l1 *node, l2 *node) *node {
+func AddTwoNumbers2(l1 *Node, l2 *Node) *Node {
 	if l1 == nil {
 		return l2
 	}
@@ -738,7 +738,7 @@ func AddTwoNumbers2(l1 *node, l2 *node) *node {
 	return head.next
 }
 
-func generateRandChain(maxValue int) (*chain, int) {
+func generateRandChain(maxValue int) (*Chain, int) {
 
 	value := rand.Intn(maxValue)
 
@@ -749,13 +749,13 @@ func generateRandChain(maxValue int) (*chain, int) {
 	return ch, saveValue
 }
 
-func generateFixedChain(value int) (*chain, int) {
+func generateFixedChain(value int) (*Chain, int) {
 	ch := generateChain(value)
 
 	return ch, value
 }
 
-func generateChain(value int) *chain {
+func generateChain(value int) *Chain {
 	ch := newChain()
 	for value > 0 {
 		v := value % 10
@@ -765,7 +765,7 @@ func generateChain(value int) *chain {
 	return ch
 }
 
-func compareChain(ch1 *chain, ch2 *chain) bool {
+func compareChain(ch1 *Chain, ch2 *Chain) bool {
 	if ch1 == nil || ch2 == nil {
 		return false
 	}
@@ -784,7 +784,7 @@ func compareChain(ch1 *chain, ch2 *chain) bool {
 	return cur1 == nil
 }
 
-func ReverseChain(head *node) *node {
+func ReverseChain(head *Node) *Node {
 	if head == nil || head.next == nil {
 		return nil
 	}
@@ -803,7 +803,7 @@ func ReverseChain(head *node) *node {
 	return pre
 }
 
-type NodeHeap []*node
+type NodeHeap []*Node
 
 func (h *NodeHeap) Len() int {
 	return len(*h)
@@ -818,7 +818,7 @@ func (h *NodeHeap) Swap(i, j int) {
 }
 
 func (h *NodeHeap) Push(x interface{}) {
-	*h = append(*h, x.(*node))
+	*h = append(*h, x.(*Node))
 }
 
 func (h *NodeHeap) Pop() (v interface{}) {
@@ -832,7 +832,7 @@ func (h *NodeHeap) IsEmpty() bool {
 }
 
 // KSortChainMerge 将 k 个有序的单链表合并成一个有序链表
-func KSortChainMerge(head []*node) *node {
+func KSortChainMerge(head []*Node) *Node {
 	if len(head) == 0 {
 		return nil
 	}
@@ -841,7 +841,7 @@ func KSortChainMerge(head []*node) *node {
 
 	rootNode := root
 
-	nodeHeap := NodeHeap(make([]*node, 0, len(head)))
+	nodeHeap := NodeHeap(make([]*Node, 0, len(head)))
 
 	// 将每个链表的头节入堆
 	for _, cur := range head {
@@ -850,7 +850,7 @@ func KSortChainMerge(head []*node) *node {
 
 	for !nodeHeap.IsEmpty() {
 		// 从堆中弹出的节点就是最小节点
-		cur := heap.Pop(&nodeHeap).(*node)
+		cur := heap.Pop(&nodeHeap).(*Node)
 		rootNode.next = cur
 		rootNode = rootNode.next
 		// 依次将弹出节点的下一个节点入堆，本质上是将单链表的后续节点都入堆，然后弹出最小节点

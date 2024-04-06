@@ -1,10 +1,9 @@
 package binary
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
-
 
 func Test_BinarySearch_1(t *testing.T) {
 	arr := []int{1, 2, 3, 4, 5, 6}
@@ -28,4 +27,16 @@ func Test_BinarySearch_2(t *testing.T) {
 
 	i = BinarySearch_2(arr, 7)
 	assert.Equal(t, i, 0, "i 应该等于 5")
+}
+
+func Test_findLeftBound(t *testing.T) {
+	nums := []int{1, 2, 3, 3, 3, 5, 7}
+	i := findLeftBound(nums, 3) // 查找到了从左往右数第一个 3
+	assert.Equal(t, 2, i)
+}
+
+func Test_findRightBound(t *testing.T) {
+	nums := []int{1, 2, 3, 3, 3, 5, 7}
+	i := findRightBound(nums, 3) // 查找到了从右往左数第一个 3
+	assert.Equal(t, 5, i)
 }

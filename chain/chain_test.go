@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func initChain() *chain {
+func initChain() *Chain {
 	ch := newChain()
 
 	for i := 0; i < 10; i++ {
@@ -36,7 +36,7 @@ func TestChainUpdate(t *testing.T) {
 	fmt.Println("===== 单链表更新 =====")
 	no := ch.query(2)
 	fmt.Println("更新前: ", no.value)
-	upNo := ch.update(no,10)
+	upNo := ch.update(no, 10)
 	fmt.Println("更新后: ", upNo.value)
 	fmt.Println("===== 单链表更新 =====")
 }
@@ -78,7 +78,6 @@ func TestIsPalindrome1(t *testing.T) {
 	ch3.insert(2)
 	assert.Equal(t, IsPalindrome1(ch3.head.next), false)
 }
-
 
 func TestIsPalindrome2(t *testing.T) {
 	// 1->2->3->2->1
@@ -308,7 +307,7 @@ func TestKSortChainMerge(t *testing.T) {
 	ch2 := initChain()
 	ch3 := initChain()
 
-	head := []*node{ch1.head.next, ch2.head.next, ch3.head.next}
+	head := []*Node{ch1.head.next, ch2.head.next, ch3.head.next}
 
 	root := KSortChainMerge(head)
 

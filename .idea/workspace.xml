@@ -5,48 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f023505-a2da-4343-8350-1a7df2943f57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chain/chain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chain/chain_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consistenthash/consistenthash.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consistenthash/consistenthash_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/algraph.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/graph.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/graph_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heap/heap.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heap/heap_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sorts/heap_sort.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sorts/heap_sort_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trees/trie/trie.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trees/trie/trie_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionfind/unionfind.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionfind/unionfind_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/arrangement/arrangement.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/arrangement/arrangement_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/partions/partions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/partions/partions_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/queen/queen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backtrack/queen/queen_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binary/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/134_copyRandomList/chain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/86_partition/chain_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/86_partition/chanin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/coins/coins.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/coins/coins_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/fbi/fbi.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/fbi/fbi_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/nsum/nsum.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/nsum/nsum_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/point24/point.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/point24/point_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/step/step.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/step/step_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/xx_partition/chain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/xx_partition/chain_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slide/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slide/slide.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slide/slide_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binary/binary.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binary/binary_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/vote/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/vote/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lfu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lfu/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lfu/lfu.go" beforeDir="false" afterPath="$PROJECT_DIR$/lfu/lfu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lfu/lfu_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/lfu/lfu_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lru/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/lru/lru.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/lru/lru_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue/queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queue.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue/queue_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queue_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorts/sorts.go" beforeDir="false" afterPath="$PROJECT_DIR$/sorts/sorts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorts/sorts_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/sorts/sorts_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stack_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/trees/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/btree/btree.go" beforeDir="false" afterPath="$PROJECT_DIR$/trees/btree/btree.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trees/btree/btree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/trees/btree/btree_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chain/chain.go" beforeDir="false" afterPath="$PROJECT_DIR$/chain/chain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chain/chain_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/chain/chain_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/graph.go" beforeDir="false" afterPath="$PROJECT_DIR$/graph/graph.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heap/heap.go" beforeDir="false" afterPath="$PROJECT_DIR$/heap/heap.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heap/heap_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/heap/heap_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,112 +72,115 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file:///usr/local/go/src/runtime/panic.go" root0="SKIP_INSPECTION" />
     <setting file="file:///usr/local/go/src/testing/testing.go" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1qjdJbdLJVNxLILkOZLUpT6OQ12" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable..is.expanded" value="false" />
-    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoProjectSettingsConfigurable" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/toothless/code/algorithm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/heap/assests" />
+      <recent name="$PROJECT_DIR$/heap" />
+      <recent name="$PROJECT_DIR$/backtrack/arrangement" />
       <recent name="$PROJECT_DIR$/trees/btree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestUnionSet in github.com/landians/algorithm/unionfind">
-    <configuration name="TestHashing in github.com/landians/algorithm/consistenthash" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestHeapSort in github.com/landians/algorithm/heap">
+    <configuration name="TestHeapSort in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/consistenthash" />
+      <working_directory value="$PROJECT_DIR$/heap" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/consistenthash" />
+      <package value="github.com/landians/algorithm/heap" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestHashing\E$" />
+      <pattern value="^\QTestHeapSort\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestKSortChainMerge in github.com/landians/algorithm/chain" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestIsPalindrome_5 in github.com/landians/algorithm/leetcode/234_isPalindrome" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/chain" />
+      <working_directory value="$PROJECT_DIR$/leetcode/234_isPalindrome" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/chain" />
+      <package value="github.com/landians/algorithm/leetcode/234_isPalindrome" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestKSortChainMerge\E$" />
+      <pattern value="^\QTestIsPalindrome_5\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNew in github.com/landians/algorithm/unionfind" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNewMaxHeap in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/unionfind" />
+      <working_directory value="$PROJECT_DIR$/heap" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/unionfind" />
+      <package value="github.com/landians/algorithm/heap" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestNew\E$" />
+      <pattern value="^\QTestNewMaxHeap\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestReverseChain in github.com/landians/algorithm/chain" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPartition_1 in github.com/landians/algorithm/leetcode/86_partition" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/chain" />
+      <working_directory value="$PROJECT_DIR$/leetcode/86_partition" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/chain" />
+      <package value="github.com/landians/algorithm/leetcode/86_partition" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestReverseChain\E$" />
+      <pattern value="^\QTestPartition_1\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestUnionSet in github.com/landians/algorithm/unionfind" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_HeapInsert in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/unionfind" />
+      <working_directory value="$PROJECT_DIR$/heap" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/unionfind" />
+      <package value="github.com/landians/algorithm/heap" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestUnionSet\E$" />
+      <pattern value="^\QTest_HeapInsert\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestUnionSet in github.com/landians/algorithm/unionfind" />
-        <item itemvalue="Go Test.TestNew in github.com/landians/algorithm/unionfind" />
-        <item itemvalue="Go Test.TestHashing in github.com/landians/algorithm/consistenthash" />
-        <item itemvalue="Go Test.TestKSortChainMerge in github.com/landians/algorithm/chain" />
-        <item itemvalue="Go Test.TestReverseChain in github.com/landians/algorithm/chain" />
+        <item itemvalue="Go Test.TestHeapSort in github.com/landians/algorithm/heap" />
+        <item itemvalue="Go Test.TestNewMaxHeap in github.com/landians/algorithm/heap" />
+        <item itemvalue="Go Test.Test_HeapInsert in github.com/landians/algorithm/heap" />
+        <item itemvalue="Go Test.TestPartition_1 in github.com/landians/algorithm/leetcode/86_partition" />
+        <item itemvalue="Go Test.TestIsPalindrome_5 in github.com/landians/algorithm/leetcode/234_isPalindrome" />
       </list>
     </recent_temporary>
   </component>
@@ -199,16 +198,45 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
     <environment>
       <map>
         <entry key="GOPROXY" value="https://goproxy.cn" />
       </map>
     </environment>
-    <proxy>https://goproxy.cn</proxy>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/xx_partition/chain_test.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/heap/heap_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/heap/heap_test.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/heap/heap_test.go</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="*(*&quot;string&quot;)(1374389675840)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/algorithm$Test_HeapSortedArrDistanceLessK_in_github_com_landians_algorithm_sorts.out" NAME="Test_HeapSortedArrDistanceLessK in github.com/landians/algorithm/sorts Coverage Results" MODIFIED="1629620420663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

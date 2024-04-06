@@ -1,6 +1,5 @@
 package binary
 
-
 /*
 二分法可以处理的问题:
 1. 在一个有序数组中, 找 == 某个数存在的位置
@@ -64,3 +63,41 @@ arr[N-2], arr[N-1], 若 arr[N-2] < arr[N-1], 则 arr[N-2] 就是局部最小值
              \        /
 arr[0]   arr[1] .... arr[N-2] arr[N-1]  
 */
+
+// 搜索左边界
+func findLeftBound(nums []int, target int) int {
+	if len(nums) == 0 {
+		return -1
+	}
+
+	lo, hi := 0, len(nums)
+
+	for lo < hi {
+		mid := lo + (hi - lo) / 2
+		if nums[mid] < target {
+			lo = mid+1
+		} else {
+			hi = mid
+		}
+	}
+	return lo
+}
+
+// 搜索右边界
+func findRightBound(nums []int, target int) int {
+	if len(nums) == 0 {
+		return -1
+	}
+
+	lo, hi := 0, len(nums)
+
+	for lo < hi {
+		mid := lo + (hi - lo) / 2
+		if nums[mid] > target {
+			hi = mid
+		} else {
+			lo = mid+1
+		}
+	}
+	return lo
+}
