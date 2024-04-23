@@ -15,88 +15,45 @@ package binary
 注: go标准库中的二分查找函数是: sort.Search
 */
 
+func searchRange(nums []int, target int) []int {
+	if len(nums) == 0 {
+		return []int{-1, -1}
+	}
 
-func search(arr []int, f func(int) bool) int {
-	if len(arr) == 0 {
+	i := FindLeftBound(nums, target)
+	if i == len(nums) || nums[i] != target {
+		return []int{-1, -1}
+	}
+
+	j := FindLeftBound(nums, target+1)
+
+	return []int{i, j - 1}
+}
+
+func FindLeftBound(nums []int, target int) int {
+	if len(nums) == 0 {
 		return -1
 	}
-	lo, hi := 0, len(arr)-1
 
+	f := func(i int) bool {
+		return nums[i] >= target
+	}
+
+	i := binarySearch(len(nums), f)
+
+	// i == len(nums) || nums[i] != target 则认为是找不到
+
+	return i
+}
+
+func binarySearch(n int, f func(int) bool) int {
+	lo, hi := 0, n
 	for lo < hi {
 		mid := int(uint(lo+hi) >> 1)
 		if !f(mid) {
-			lo = mid + 1 
+			lo = mid + 1
 		} else {
 			hi = mid
-		}
-	}
-
-	return lo
-}
-
-// 二分查找, 针对的是升序数组
-func BinarySearch_1(arr []int, value int) int {
-	f := func(i int) bool {
-		return arr[i] >= value
-	}
-	return search(arr, f)
-}
-
-// 二分查找, 针对的是降序数组
-func BinarySearch_2(arr []int, value int) int {
-	f := func(i int) bool {
-		return arr[i] <= value
-	}
-	return search(arr, f)
-}
-
-/* 
-局部最小值定义:
-arr[i-1], arr[i], arr[i+1], 若 arr[i] < arr[i-1] 同时 arr[i] < arr[i+1], 则 arr[i] 就是局部最小值
-arr[N-2], arr[N-1], 若 arr[N-2] < arr[N-1], 则 arr[N-2] 就是局部最小值
-
-局部最小值问题:
-现有数组 arr[0 ~ N-1], 数组中的每相邻两个数都是不相等的, 需要返回其中一个局部最小值的下标
-
-如果一个数组中的值的变化趋势如下, 因为每相邻两个数都是不相等的的原因, 可以判断数组中间一定存在局部最小值
-------------\          /--------------
-             \        /
-arr[0]   arr[1] .... arr[N-2] arr[N-1]  
-*/
-
-// 搜索左边界
-func findLeftBound(nums []int, target int) int {
-	if len(nums) == 0 {
-		return -1
-	}
-
-	lo, hi := 0, len(nums)
-
-	for lo < hi {
-		mid := lo + (hi - lo) / 2
-		if nums[mid] < target {
-			lo = mid+1
-		} else {
-			hi = mid
-		}
-	}
-	return lo
-}
-
-// 搜索右边界
-func findRightBound(nums []int, target int) int {
-	if len(nums) == 0 {
-		return -1
-	}
-
-	lo, hi := 0, len(nums)
-
-	for lo < hi {
-		mid := lo + (hi - lo) / 2
-		if nums[mid] > target {
-			hi = mid
-		} else {
-			lo = mid+1
 		}
 	}
 	return lo

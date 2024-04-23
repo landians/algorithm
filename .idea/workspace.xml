@@ -5,44 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f023505-a2da-4343-8350-1a7df2943f57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backtrack/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/arrangement/arrangement.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/arrangement/arrangement_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/partions/partions.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/partions/partions_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/queen/queen.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backtrack/queen/queen_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binary/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/134_copyRandomList/chain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/86_partition/chain_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/86_partition/chanin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/coins/coins.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/coins/coins_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/fbi/fbi.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/fbi/fbi_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/nsum/nsum.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/nsum/nsum_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/point24/point.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/point24/point_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/step/step.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/step/step_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/xx_partition/chain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/xx_partition/chain_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slide/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slide/slide.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slide/slide_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/list/demo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/list/demo_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/list/heap.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/map/demo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/map/demo_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/slide_window/demo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/slide_window/demo_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binary/binary.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binary/binary_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chain/chain.go" beforeDir="false" afterPath="$PROJECT_DIR$/chain/chain.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chain/chain_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/chain/chain_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/graph.go" beforeDir="false" afterPath="$PROJECT_DIR$/graph/graph.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heap/heap.go" beforeDir="false" afterPath="$PROJECT_DIR$/heap/heap.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heap/heap_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/heap/heap_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chain/chain.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chain/chain_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/134_copyRandomList/chain.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/86_partition/chain_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/86_partition/chanin.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/xx_partition/chain.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/xx_partition/chain_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,74 +95,74 @@
       <recent name="$PROJECT_DIR$/trees/btree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestHeapSort in github.com/landians/algorithm/heap">
-    <configuration name="TestHeapSort in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestMergeTwoList in github.com/landians/algorithm/leetcode/list">
+    <configuration name="TestCheckInclusion in github.com/landians/algorithm/leetcode/567_checkInclusion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/heap" />
+      <working_directory value="$PROJECT_DIR$/leetcode/567_checkInclusion" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/heap" />
+      <package value="github.com/landians/algorithm/leetcode/567_checkInclusion" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestHeapSort\E$" />
+      <pattern value="^\QTestCheckInclusion\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestIsPalindrome_5 in github.com/landians/algorithm/leetcode/234_isPalindrome" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFindAnagrams in github.com/landians/algorithm/leetcode/438_findAnagrams" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/leetcode/234_isPalindrome" />
+      <working_directory value="$PROJECT_DIR$/leetcode/438_findAnagrams" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/leetcode/234_isPalindrome" />
+      <package value="github.com/landians/algorithm/leetcode/438_findAnagrams" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestIsPalindrome_5\E$" />
+      <pattern value="^\QTestFindAnagrams\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNewMaxHeap in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLengthOfLongestSubstring in github.com/landians/algorithm/leetcode/3_lengthOfLongestSubstring" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/heap" />
+      <working_directory value="$PROJECT_DIR$/leetcode/3_lengthOfLongestSubstring" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/heap" />
+      <package value="github.com/landians/algorithm/leetcode/3_lengthOfLongestSubstring" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestNewMaxHeap\E$" />
+      <pattern value="^\QTestLengthOfLongestSubstring\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestPartition_1 in github.com/landians/algorithm/leetcode/86_partition" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMergeTwoList in github.com/landians/algorithm/leetcode/list" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/leetcode/86_partition" />
+      <working_directory value="$PROJECT_DIR$/leetcode/list" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/leetcode/86_partition" />
+      <package value="github.com/landians/algorithm/leetcode/list" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestPartition_1\E$" />
+      <pattern value="^\QTestMergeTwoList\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_HeapInsert in github.com/landians/algorithm/heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMinWindow in github.com/landians/algorithm/leetcode/17_minWindows" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/heap" />
+      <working_directory value="$PROJECT_DIR$/leetcode/17_minWindows" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/heap" />
+      <package value="github.com/landians/algorithm/leetcode/17_minWindows" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_HeapInsert\E$" />
+      <pattern value="^\QTestMinWindow\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestHeapSort in github.com/landians/algorithm/heap" />
-        <item itemvalue="Go Test.TestNewMaxHeap in github.com/landians/algorithm/heap" />
-        <item itemvalue="Go Test.Test_HeapInsert in github.com/landians/algorithm/heap" />
-        <item itemvalue="Go Test.TestPartition_1 in github.com/landians/algorithm/leetcode/86_partition" />
-        <item itemvalue="Go Test.TestIsPalindrome_5 in github.com/landians/algorithm/leetcode/234_isPalindrome" />
+        <item itemvalue="Go Test.TestMergeTwoList in github.com/landians/algorithm/leetcode/list" />
+        <item itemvalue="Go Test.TestLengthOfLongestSubstring in github.com/landians/algorithm/leetcode/3_lengthOfLongestSubstring" />
+        <item itemvalue="Go Test.TestFindAnagrams in github.com/landians/algorithm/leetcode/438_findAnagrams" />
+        <item itemvalue="Go Test.TestCheckInclusion in github.com/landians/algorithm/leetcode/567_checkInclusion" />
+        <item itemvalue="Go Test.TestMinWindow in github.com/landians/algorithm/leetcode/17_minWindows" />
       </list>
     </recent_temporary>
   </component>
@@ -229,6 +211,31 @@
           <url>file://$PROJECT_DIR$/heap/heap_test.go</url>
           <line>18</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/binary/binary_test.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/567_checkInclusion/slide_window_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/567_checkInclusion/slide_window_test.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/3_lengthOfLongestSubstring/slide_window_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/3_lengthOfLongestSubstring/slide_window_test.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
