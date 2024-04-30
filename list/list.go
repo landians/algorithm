@@ -374,11 +374,58 @@ func findFromEnd(head *ListNode, k int) *ListNode {
 
 // https://leetcode.cn/problems/palindrome-linked-list/description/
 func isPalindrome(head *ListNode) bool {
-	if head == nil {
+	if head == nil || head.Next == nil {
 		return false
 	}
 
-	// TODO:
+	var pre *ListNode
+
+	slow, fast := head, head
+	for fast != nil && fast.Next != nil {
+		pre = slow
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+
+	// 此时 slow 指向了中间节点, 先断开后半部分节点
+	pre.Next = nil
+
+	// 将后半部分链表反转
+	re := reverseLinkedList(slow)
+	p1 := head
+	p2 := re
+
+	// 开始判断是否为回文链表
+	for p2 != nil {
+		if p1.Val != p2.Val {
+			return false
+		}
+		p1 = p1.Next
+		p2 = p2.Next
+	}
+
+	se := reverseLinkedList(re)
+	pre.Next = se
 
 	return false
+}
+
+// https://leetcode.cn/problems/remove-duplicates-from-sorted-list/description/
+func deleteDuplicates(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+
+	slow, fast := head, head
+	for fast != nil {
+		if fast.Val != slow.Val {
+			slow.Next = fast
+			slow = slow.Next
+		}
+		fast = fast.Next
+	}
+
+	// 断开与后面重复元素的连接
+	slow.Next = nil
+	return head
 }

@@ -25,3 +25,8 @@ func TestMergeTwoList(t *testing.T) {
 	formatL := FormatChain(l)
 	assert.Equal(t, "head->1->1->2->2->3->3->4->4->5->5", formatL)
 }
+
+func TestIsPalindrome(t *testing.T) {
+	l := NewListFromArray([]int{1, 2, 3, 2, 1})
+	t.Log(isPalindrome(l))
+}

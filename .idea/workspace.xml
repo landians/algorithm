@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f023505-a2da-4343-8350-1a7df2943f57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/list/demo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/list/demo_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/list/heap.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/map/demo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/map/demo_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/slide_window/demo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/slide_window/demo_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/array/array.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/array/array_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binary/binary.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binary/binary_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/binary/binary_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chain/chain.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chain/chain_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/134_copyRandomList/chain.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/234_isPalindrome/chain_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/86_partition/chain_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/86_partition/chanin.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/xx_partition/chain.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/xx_partition/chain_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/list/list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/demo_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/list/list_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/demo_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/map/map_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slide_window/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/slide_window/slide_window.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slide_window/demo_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/slide_window/slide_window_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +53,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="1qjdJbdLJVNxLILkOZLUpT6OQ12" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,21 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/toothless/code/algorithm&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Test.TestIsPalindrome in github.com/landians/algorithm/list.executor": "Run",
+    "Go Test.TestRemoveDuplicates in github.com/landians/algorithm/array.executor": "Run",
+    "Go Test.TestTwoSum in github.com/landians/algorithm/array.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/yijie.sun",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/heap/assests" />
@@ -95,29 +93,17 @@
       <recent name="$PROJECT_DIR$/trees/btree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestMergeTwoList in github.com/landians/algorithm/leetcode/list">
-    <configuration name="TestCheckInclusion in github.com/landians/algorithm/leetcode/567_checkInclusion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestIsPalindrome in github.com/landians/algorithm/list">
+    <configuration name="TestIsPalindrome in github.com/landians/algorithm/list" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/leetcode/567_checkInclusion" />
+      <working_directory value="$PROJECT_DIR$/list" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/leetcode/567_checkInclusion" />
+      <package value="github.com/landians/algorithm/list" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCheckInclusion\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestFindAnagrams in github.com/landians/algorithm/leetcode/438_findAnagrams" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/leetcode/438_findAnagrams" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/leetcode/438_findAnagrams" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestFindAnagrams\E$" />
+      <pattern value="^\QTestIsPalindrome\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLengthOfLongestSubstring in github.com/landians/algorithm/leetcode/3_lengthOfLongestSubstring" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -144,27 +130,46 @@
       <pattern value="^\QTestMergeTwoList\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMinWindow in github.com/landians/algorithm/leetcode/17_minWindows" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRemoveDuplicates in github.com/landians/algorithm/array" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algorithm" />
-      <working_directory value="$PROJECT_DIR$/leetcode/17_minWindows" />
+      <working_directory value="$PROJECT_DIR$/array" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/landians/algorithm/leetcode/17_minWindows" />
+      <package value="github.com/landians/algorithm/array" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestMinWindow\E$" />
+      <pattern value="^\QTestRemoveDuplicates\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTwoSum in github.com/landians/algorithm/array" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algorithm" />
+      <working_directory value="$PROJECT_DIR$/array" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/landians/algorithm/array" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestTwoSum\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestIsPalindrome in github.com/landians/algorithm/list" />
+        <item itemvalue="Go Test.TestTwoSum in github.com/landians/algorithm/array" />
+        <item itemvalue="Go Test.TestRemoveDuplicates in github.com/landians/algorithm/array" />
         <item itemvalue="Go Test.TestMergeTwoList in github.com/landians/algorithm/leetcode/list" />
         <item itemvalue="Go Test.TestLengthOfLongestSubstring in github.com/landians/algorithm/leetcode/3_lengthOfLongestSubstring" />
-        <item itemvalue="Go Test.TestFindAnagrams in github.com/landians/algorithm/leetcode/438_findAnagrams" />
-        <item itemvalue="Go Test.TestCheckInclusion in github.com/landians/algorithm/leetcode/567_checkInclusion" />
-        <item itemvalue="Go Test.TestMinWindow in github.com/landians/algorithm/leetcode/17_minWindows" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-2946fb9b3188-155fe4b6e3a0-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.14475.38" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
